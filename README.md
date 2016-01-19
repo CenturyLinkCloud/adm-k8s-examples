@@ -1,10 +1,10 @@
 # adm-k8s-examples
 
-This is a collection of sample applications that are packaged to run inside a kubernetes cluster. To run these, you will need a kubernetes cluster and  the kubernetes command line client 'kubectl' installed on your client machine. 
-
-These sample applications are provided as reference material for blog posts and documention that lives on www.ctl.io. 
+This is a collection of sample applications that are packaged so that they run inside a kubernetes cluster. These sample applications are provided as reference material for blog posts and documention that lives on CenturyLink Clouds websites (www.ctl.io). 
 
 ## List of applications
+
+These applications can be found in this repo:
 
 Sample Application | Description
 ----- | -----
@@ -15,6 +15,9 @@ nginx-with-git-volume | A simple static web server running nginx that is backed 
 
 For more detail about these applications and how to use them, please check out the README files included in each sub-directory. 
 
+## Requirments
+
+To run these, you will need a kubernetes cluster and have the kubernetes command line client 'kubectl' installed on your client machine. 
 
 ## License
 
