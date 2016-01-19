@@ -4,9 +4,11 @@ This is a collection of sample applications that are packaged to run inside a ku
 
 These sample applications are provided as reference material for blog posts and documention that lives on www.ctl.io. 
 
-* List of applications
+## List of applications
 
-nginx-with-git-volume -> A simple static web server running nginx that is backed by a gitrepo volume that automatically pulls web content from guthub into the pod. 
+Sample Application | Description
+----- | -----
+nginx-with-git-volume | A simple static web server running nginx that is backed by a gitrepo volume that automatically pulls web content from guthub into the pod. 
 
 
 ## Usage information
