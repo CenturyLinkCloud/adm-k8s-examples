@@ -1,0 +1,51 @@
+
+---    
+   
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-gitrepo-v0.4
+spec:
+  replicas: 2
+  selector:
+    app: website-from-git
+    ver: 0-4
+    
+  template:
+    metadata:
+      labels:
+        app: website-from-git
+        ver: 0-4
+    spec:
+      containers:
+      - name: nginx
+        image: ckleban/nginx-from-git:v2
+        livenessProbe:
+          # an http probe
+          httpGet:
+            path: /
+            port: 80
+          # length of time to wait for a pod to initialize
+          # after pod startup, before applying health checking
+          initialDelaySeconds: 3
+          timeoutSeconds: 1        
+
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+          limits:
+            cpu: "100m"
+            memory: "128Mi"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: /wwwdata
+          name: gitdata
+      volumes:
+      - name: gitdata
+        gitRepo:
+          Repository: https://github.com/ckleban/sample-website
+          Revision: aaf7ea4beb9771468b6729bc041dd567dff2f472
+
+

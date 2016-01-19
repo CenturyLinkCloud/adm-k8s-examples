@@ -1,0 +1,18 @@
+ 
+apiVersion: v1
+kind: Service
+metadata:
+  name: website1-lb
+  labels:
+    app: website-from-git
+
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: website-from-git
+    
+
+   
+   
