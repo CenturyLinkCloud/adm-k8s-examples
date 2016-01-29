@@ -5,7 +5,7 @@ kind: ReplicationController
 metadata:
   name: static-website-v3
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     app: website-from-git
     ver: 3-0
