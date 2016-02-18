@@ -6,8 +6,8 @@ metadata:
         app: website-from-git
         ver: 3-0
         run: nginx
-        canary: true
-    spec:
+        track: canary
+spec:
       containers:
       - name: nginx
         image: ckleban/nginx-from-git:v2
