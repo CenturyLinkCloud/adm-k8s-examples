@@ -5,7 +5,7 @@ kind: ReplicationController
 metadata:
   name: static-website-v3
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     app: website-from-git
     ver: 3-0
@@ -15,6 +15,7 @@ spec:
       labels:
         app: website-from-git
         ver: 3-0
+        run: nginx
     spec:
       containers:
       - name: nginx
