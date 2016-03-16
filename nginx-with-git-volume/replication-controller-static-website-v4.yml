@@ -45,5 +45,5 @@ spec:
       - name: gitdata
         gitRepo:
           repository: https://github.com/ckleban/sample-website
-          revision: e8c2632146f4e8289820e09c3c24811fb985c02a
+          revision:  d772de8fa8a8495b06123dc926232fd4273f223a
           
